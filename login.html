@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block signin_active %}active{% endblock %}
+
+{% block content %}
+<form>
+    <label>Email</label>
+    <input type="email" placeholder="you@company.com">
+
+    <label>Password</label>
+    <input type="password" placeholder="••••••••">
+
+    <a href="#" class="forgot">Forgot password?</a>
+
+    <button class="btn">Sign In</button>
+
+    <div class="divider">Or continue with</div>
+
+    <div class="social">
+        <button type="button">Google</button>
+        <button type="button">Voice Login</button>
+    </div>
+</form>
+{% endblock %}
