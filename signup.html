@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block register_active %}active{% endblock %}
+
+{% block content %}
+<form>
+    <label>Full Name</label>
+    <input type="text" placeholder="Priya Sharma">
+
+    <label>Email</label>
+    <input type="email" placeholder="you@company.com">
+
+    <label>Password</label>
+    <input type="password" placeholder="••••••••">
+
+    <label>Confirm Password</label>
+    <input type="password" placeholder="••••••••">
+
+    <button class="btn">Create Account</button>
+
+    <div class="divider">Or continue with</div>
+
+    <div class="social">
+        <button type="button">Google</button>
+        <button type="button">Voice Login</button>
+    </div>
+</form>
+{% endblock %}
