@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voice Mail Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f7f7f7; color: #222; }
+    .container { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: #fff; border-right: 1px solid #e5e5e5; padding: 20px; }
+    .logo { font-size: 24px; font-weight: 600; margin-bottom: 20px; }
+    .compose { width: 100%; background: #000; color: #fff; padding: 12px; border: none; border-radius: 10px; margin-bottom: 20px; }
+    .section { margin-top: 25px; }
+    .section h4 { margin-bottom: 10px; font-size: 14px; }
+    .section p { margin: 10px 0; color: #555; }.inbox { flex: 1; padding: 20px; border-right: 1px solid #e5e5e5; }
+.topbar { display: flex; justify-content: space-between; margin-bottom: 20px; }
+.search { width: 300px; padding: 10px; border: 1px solid #ddd; border-radius: 10px; }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 20px; }
+.card { background: #fff; padding: 20px; border-radius: 12px; border: 1px solid #eee; }
+.messages .msg { background: #fff; border: 1px solid #eee; border-radius: 12px; padding: 15px; margin-bottom: 15px; display: flex; gap: 15px; }
+.avatar { width: 40px; height: 40px; border-radius: 50%; background: #ddd; display: flex; align-items: center; justify-content: center; font-size: 12px; }
+.tag { display: inline-block; margin-top: 5px; background: #2196f3; color: white; padding: 4px 10px; border-radius: 20px; font-size: 12px; }
+
+.ai-panel { width: 380px; background: #fff; padding: 20px; }
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin: 15px 0; }
+.chip { background: #f0f0f0; padding: 8px 12px; border-radius: 20px; font-size: 12px; }
+.empty { height: 500px; display: flex; align-items: center; justify-content: center; text-align: center; color: #999; }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">✧ Voice Mail</div>
+      <button class="compose">Compose</button><div class="section">
+    <h4>MAIL</h4>
+    <p>Inbox</p>
+    <p>Draft</p>
+    <p>Sent</p>
+    <p>Spam</p>
+    <p>Archive</p>
+    <p>Trash</p>
+  </div>
+
+  <div class="section">
+    <h4>CHANNELS</h4>
+    <p>Email</p>
+    <p>WhatsApp</p>
+    <p>Telegram</p>
+    <p>Outlook</p>
+  </div>
+</aside>
+
+<main class="inbox">
+  <div class="topbar">
+    <h2>Inbox</h2>
+    <input class="search" placeholder="Search messages..." />
+  </div>
+
+  <div class="stats">
+    <div class="card"><h2>248</h2><p>Total Messages</p></div>
+    <div class="card"><h2>12</h2><p>Unread</p></div>
+    <div class="card"><h2>7</h2><p>Sent Today</p></div>
+    <div class="card"><h2>31</h2><p>AI Replies</p></div>
+  </div>
+
+  <div class="messages">
+    <div class="msg"><div class="avatar">AR</div><div><b>Alice Rodriguez</b><p>Q4 Marketing Campaign Review</p><span class="tag">email</span></div></div>
+    <div class="msg"><div class="avatar">KC</div><div><b>Kevin Chen</b><p>Server downtime notification</p><span class="tag">whatsapp</span></div></div>
+    <div class="msg"><div class="avatar">SM</div><div><b>Sarah Mitchell</b><p>Invoice #2847 - Payment Due</p><span class="tag">email</span></div></div>
+  </div>
+</main>
+
+<section class="ai-panel">
+  <h2>✧ AI Search</h2>
+  <input class="search" style="width:100%" placeholder="Search or ask a question..." />
+  <div class="chips">
+    <span class="chip">Unread today</span>
+    <span class="chip">Summarise</span>
+    <span class="chip">Invoices</span>
+    <span class="chip">From Alice</span>
+  </div>
+  <div class="empty">Ask me to find emails, summarise threads, or filter your inbox</div>
+</section>
+
+  </div>
+</body>
+</html>
